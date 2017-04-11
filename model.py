@@ -25,6 +25,8 @@ class User(db.Model):
 class Response(db.Model):
     """User response table."""
 
+    __tablename__ = "responses"
+
     response_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
     type_response = db.Column(db.String(100))
@@ -43,13 +45,14 @@ def init_app():
     print "Connected to DB."
 
 
-def connect_to_db(app, db_uri='postgres:///courses'):
+def connect_to_db(app, db_uri='postgres:///contacts'):
     """Connect the database to Flask app."""
 
     app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
-    # app.config['SQLALCHEMY_ECHO'] = True
+    app.config['SQLALCHEMY_ECHO'] = True
     db.app = app
     db.init_app(app)
+    db.create_all()
 
 
 if __name__ == "__main__":
