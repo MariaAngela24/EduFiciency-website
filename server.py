@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from model import connect_to_db, db, User, Response
 
 app = Flask(__name__)
 
@@ -50,7 +51,7 @@ def romeo_page():
 
 if __name__ == "__main__":
     app.debug = True
-
+    connect_to_db(app)
     # DebugToolbarExtension(app)
 
     # PORT = int(os.environ.get("PORT", 5000))
