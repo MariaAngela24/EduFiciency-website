@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from model import connect_to_db, db, User, Response
 
 app = Flask(__name__)
@@ -37,8 +37,39 @@ def blog_page():
 
 
 @app.route("/contact")
-def contact_page():
-    """Show contact page."""
+def show_contact_form():
+    """Show contact form."""
+
+    return render_template("contact.html")
+
+
+@app.route("/contact", methods=["POST"])
+def process_contact():
+    """Show contact form."""
+
+    fname = request.form.get("fname")
+    lname = request.form.get("lname")
+    email = request.form.get("email")
+    role = request.form.get("role")
+    interested_in = request.form.get("interested_in")
+    beta_tester = request.form.get("beta_tester")
+    newsletter = request.form.get("newsletter")
+    response = request.form.get("response")
+
+    user = User.query.filter_by(email=email).first()
+    
+    if not user:
+        user = User(fname=fname, lname=lname, email=email, role=role, 
+            beta_tester=beta_tester, newsletter=newsletter)
+        db.session.add(user)
+        db.session.commit()
+
+    if interested_in or response:
+        new_response = Response(user_id=user.user_id, 
+                                type_response=interested_in, 
+                                response=response)
+        db.session.add(new_response)
+        db.session.commit()
 
     return render_template("contact.html")
 

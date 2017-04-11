@@ -2,4 +2,38 @@
 {% block title %}EduFiciency{% endblock %}
 {% block content %}
 <h1>Contact us at info@eduficiency.com</h1>
+<div class="container">
+    <form action="/contact" method="POST" class="contact-form">
+        <h2 class="contact-form-heading">Get in touch!</h2>
+        <label for="email" class="sr-only">Email address</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+        <label for="fname" class="sr-only">First name</label>
+            <input type="text" name="fname" id="fname" class="form-control" placeholder="First name">
+        <label for="lname" class="sr-only">Last name</label>
+            <input type="text" name="lname" id="lname" class="form-control" placeholder="Last name">
+        <span>I'm a...</span><br>
+        <select name="role">
+            <option value="teacher">Teacher</option>
+            <option value="administrator">Administrator</option>
+            <option value="parent">Parent</option>
+            <option value="other">Other</option>
+        </select><br>
+        <span>Are you Interested in being a beta-tester?</span>
+            <input type="radio" name="beta_tester" value="True" class="form-control"> Yes<br>
+            <input type="radio" name="beta_tester" value="False" class="form-control"> No<br>
+        <span>Are you interested in receiving our newsletter?</span>
+            <input type="radio" name="newsletter" value="True" class="form-control"> Yes<br>
+            <input type="radio" name="newsletter" valye="False" class="form-control"> No<br>
+        <span>I'm interested in...</span><br>
+        <select name="interested_in">
+            <option value="demo">Demo</option>
+            <option value="product_info">General product information</option>
+            <option value="product_support">Product support</option>
+            <option value="other">Other</option>
+        </select><br>
+        <label for="response" class="sr-only">Questions/Comments/Feedback</label>
+            <input type="text" name="response" id="response" class="form-control" style="height:75px;" placeholder="Enter your comments/questions/feedback here.">
+        <button id="login-submit" class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </form>
+</div>
 {% endblock %}
