@@ -41,6 +41,13 @@ def contact_page():
 
     return render_template("contact.html")
 
+
+@app.route("/romeo")
+def romeo_page():
+    """Show romeo page."""
+
+    return render_template("romeo.html")
+
 if __name__ == "__main__":
     app.debug = True
 
