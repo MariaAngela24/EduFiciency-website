@@ -8,19 +8,19 @@ class User(db.Model):
     __tablename__ = "users"
 
     user_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    email = db.Column(db.String(30), nullable=False, unique=True)
     fname = db.Column(db.String(20))
     lname = db.Column(db.String(20))
-    email = db.Column(db.String(30), nullable=False, unique=True)
+    phone = db.Column(db.String(20))
     role = db.Column(db.String(100))
-    comment_question = db.Column(db.Text)
-    feedback = db.Column(db.Text)
-    beta_tester = db.Column(db.Boolean)
-    newsletter = db.Column(db.Boolean)
+    is_beta_tester = db.Column(db.Boolean)
+    is_subscriber = db.Column(db.Boolean)
     responses = db.relationship('Response', backref='user')
     entered_at = db.Column(db.DateTime)
 
     def __repr__(self):
         return "<User id=%s, email=%s>" % (self.user_id, self.email)
+
 
 class Response(db.Model):
     """User response table."""
@@ -31,18 +31,19 @@ class Response(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
     type_response = db.Column(db.String(100))
     response = db.Column(db.Text)
-    entered_at = db.Column(db.DateTime)
     responded_to = db.Column(db.Boolean, default=False)
+    responded_at = db.Column(db.DateTime)
+    entered_at = db.Column(db.DateTime)
 
     def __repr__(self):
         return "<User email=%s, response=%s>" % (self.user_id.email, self.response)
+
 
 def init_app():
     from flask import Flask
     app = Flask(__name__)
 
     connect_to_db(app)
-    print "Connected to DB."
 
 
 def connect_to_db(app, db_uri='postgres:///contacts'):
@@ -61,4 +62,3 @@ if __name__ == "__main__":
     app = Flask(__name__)
 
     connect_to_db(app)
-    print "Connected to DB."
