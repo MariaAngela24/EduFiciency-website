@@ -20,7 +20,7 @@ def index_page():
 def products_page():
     """Show products page."""
 
-    return render_template("products.html")
+    return render_template("romeo.html")
 
 
 @app.route("/about_us")
@@ -87,11 +87,11 @@ def process_contact():
     return render_template("contact.html")
 
 
-@app.route("/romeo")
-def romeo_page():
-    """Show romeo page."""
+# @app.route("/romeo")
+# def romeo_page():
+#     """Show romeo page."""
 
-    return render_template("romeo.html")
+#     return render_template("romeo.html")
 
 if __name__ == "__main__":
     app.debug = True
