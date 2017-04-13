@@ -27,7 +27,7 @@ def products_page():
 def about_us_page():
     """Show about_us page."""
 
-    return render_template("about_us.html")
+    return render_template("about.html")
 
 
 @app.route("/blog")
