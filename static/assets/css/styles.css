@@ -1,12 +1,12 @@
-#promo {
+.promo {
   text-align:center;
   padding:40px;
-  background:url(../../assets/img/workplace.jpg);
-  background-size:cover;
+  background:url(../../assets/img/rock_students3.jpg) no-repeat;
   height:500px;
+  background-size:cover;
 }
 
-#promo .jumbotron {
+.promo .jumbotron {
   padding:40px;
   border-radius:20px;
   background-color:rgba(255,255,255,0.75);
@@ -14,10 +14,61 @@
   margin:50px auto;
 }
 
+#home {
+  padding:15px;
+}
+
+#product .jumbotron {
+  margin:40px auto;
+}
+
+#product {
+  height:600px;
+}
+
+#romeo {
+  font-size:60px;
+}
+
+#romeo-title {
+  font-size:50px;
+  margin-bottom:15px;
+}
+
+@media (max-width:991px) {
+  #romeo-h2 {
+    font-size:30px;
+  }
+}
+
+tracker-para {
+  font-size:5px;
+}
+
+#romeo-cont {
+  background-color:white;
+}
+
+.icon.ion-clock {
+  font-size:60px;
+}
+
+@media (max-width:991px) {
+  #romeo {
+    font-size:45px;
+  }
+}
+
+@media (max-width:767px) {
+  #romeo {
+    font-size:35px;
+  }
+}
+
 .btn.btn-default {
   border-radius:5px;
   color:white;
-  background:blue;
+  background:rgb(62,62,248);
   width:190px;
   height:45px;
   font-size:17px;
@@ -49,8 +100,267 @@ body {
 .site-section {
   text-align:center;
   padding:30px 110px 60px 110px;
-  background:lightblue;
   width:100%;
+  background-color:#d3ecf5;
+}
+
+.icons {
+  font-size:42px;
+}
+
+.icon.ion-scissors {
+}
+
+#values .item-value h2 {
+  font-weight:normal;
+  margin-top:13px;
+  margin-bottom:20px;
+  font-size:24px;
+}
+
+#values {
+  background-color:white;
+}
+
+#uses .item-value h2 {
+  font-weight:normal;
+  margin-top:13px;
+  margin-bottom:20px;
+  font-size:24px;
+}
+
+#uses {
+  background-color:#d3ecf5;
+}
+
+#uses .itme-value {
+  margin-top:36px;
+}
+
+#values .item-value {
+  margin-top:36px;
+}
+
+#values .item-value i {
+}
+
+#demo2 {
+  background-color:rgb(228,228,228);
+}
+
+#demo1 {
+  background-color:white;
+}
+
+#phone {
+  background:url(../../assets/img/iphone_pic.png);
+  height:initial;
+  height:88%;
+  width:77%;
+}
+
+#app-view1 {
+  margin-top:145px;
+}
+
+@media (max-width:1199px) {
+  #app-view1 {
+    margin-top:45px;
+  }
+}
+
+#app-view2 {
+  margin-top:60px;
+}
+
+#app-view3 {
+  margin-top:60px;
+}
+
+#questions {
+  font-weight:bold;
+  font-size:47px;
+}
+
+#questions {
+  font-size:35px;
+}
+
+#tryproduct {
+  font-size:24px;
+  font-weight:normal;
+}
+
+#comments {
+  margin-top:20px;
+  margin-bottom:20px;
+  padding-left:90px;
+  padding-right:90px;
+}
+
+@media (max-width:991px) {
+  #comments {
+    text-align:center;
+    padding-top:20px;
+  }
+}
+
+#contact-btn {
+  margin-top:50px;
+  margin-bottom:40px;
+  padding:15px 50px;
+  background-color:transparent;
+  color:black;
+  border-color:black;
+}
+
+#tracker-btn {
+  background-color:transparent;
+  color:rgb(62,62,248);
+  border-color:rgb(62,62,248);
+  padding:15px 50px;
+  margin-top:20px;
+}
+
+#tracker-btn2 {
+  background-color:transparent;
+  color:rgb(62,62,248);
+  border-color:rgb(62,62,248);
+  padding:15px 50px;
+  margin-top:65px;
+}
+
+#demo-pic-1 {
+  margin-top:25px;
+}
+
+@media (max-width:991px) {
+  #demo-pic-1 {
+    width:250px;
+  }
+}
+
+@media (max-width:767px) {
+  #demo-pic-1 {
+    margin-left:-40px;
+  }
+}
+
+#demo-pic-2 {
+  height:450px;
+  width:500px;
+  text-align:center;
+  margin-top:35px;
+}
+
+#demo-pic-3 {
+  height:450px;
+  width:500px;
+  margin-top:35px;
+}
+
+@media (max-width:767px) {
+  #demo-pic-3 {
+    width:425px;
+    margin-left:-125px;
+  }
+}
+
+@media (max-width:767px) {
+  #demo-pic-2 {
+    width:425px;
+    margin-left:-125px;
+  }
+}
+
+.testers-para {
+  margin-top:15px;
+}
+
+.phone-tool {
+  font-weight:normal;
+  font-size:30px;
+  margin-bottom:45px;
+}
+
+.fa.fa-linkedin {
+  font-size:25px;
+  background-color:rgb(0,119,181);
+  padding:10px;
+  color:white;
+}
+
+#phone-screen {
+  width:150px;
+}
+
+#tracker-para {
+  font-size:25px;
+}
+
+@media (max-width:991px) {
+  #tracker-para {
+    font-size:20px;
+  }
+}
+
+.col-md-7.demo-pic-col {
+  text-align:center;
+}
+
+#jeff-bio {
+  padding-bottom:30px;
+}
+
+@media (max-width:1199px) {
+  #jeff-bio {
+    padding-bottom:30px;
+  }
+}
+
+@media (max-width:991px) {
+  #jeff-bio {
+    padding-bottom:30px;
+  }
+}
+
+#jeff-linkedIn {
+  margin-top:85px;
+}
+
+@media (max-width:1199px) {
+  #jeff-linkedIn {
+    margin-top:105px;
+  }
+}
+
+@media (max-width:991px) {
+  #jeff-linkedIn {
+    margin-top:85px;
+  }
+}
+
+#contact-us {
+  height:10%;
+  background-color:#d3ecf5;
+}
+
+@media (max-width:991px) {
+  #contact-btn {
+    margin-top:20px !important;
+  }
+}
+
+@media (max-width:991px) {
+  #contact-con {
+    text-align:center;
+  }
+}
+
+@media (max-width:767px) {
+  #contact-con {
+    margin-left:0;
+  }
 }
 
 #mission p {
@@ -65,7 +375,10 @@ body {
 }
 
 .team-boxed {
-  padding:70px 0;
+  padding:70px 0 40px 0;
+}
+
+.team-boxed .people {
 }
 
 .navbar {

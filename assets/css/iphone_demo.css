@@ -1,0 +1,14 @@
+.demo-pic {
+  padding:20px;
+}
+
+.demo-pic-col {
+  display:block;
+  text-align:center;
+}
+
+#demo-pic-1 {
+  height:60%;
+  width:60%;
+}
+
