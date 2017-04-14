@@ -20,7 +20,7 @@ def index_page():
 def products_page():
     """Show products page."""
 
-    return render_template("romeo.html")
+    return render_template("index.html")
 
 
 @app.route("/about_us")
