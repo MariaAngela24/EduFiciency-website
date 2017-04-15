@@ -43,6 +43,12 @@ def show_contact_form():
 
     return render_template("contact.html")
 
+@app.route("/romeo")
+def romeo_page():
+    """Show romeo page."""
+
+    return render_template("romeo.html")
+
 
 @app.route("/contact", methods=["POST"])
 def process_contact():
@@ -87,11 +93,6 @@ def process_contact():
     return render_template("contact.html")
 
 
-# @app.route("/romeo")
-# def romeo_page():
-#     """Show romeo page."""
-
-#     return render_template("romeo.html")
 
 if __name__ == "__main__":
     app.debug = True
