@@ -35,63 +35,11 @@
         </div>
     </nav>
     <div>
-        <div class="container site-section" id="use-form">
-            <h1>We want to hear from you!</h1>
-            <h2>Use this form to ask a question, or sign up to beta test Romeo. We would also love to hear any feedback you may have for us!</h2>
+        <div class="container site-section" id="submission-success" style="background-color: white">
+            <h1>Thank you for reaching out.</h1>
+            <h2>A team member will get in touch.</h2>
+            
         </div>
-
-        <div class="container site-section" id="contact-form">
-            <div class="wrap container-fluid">
-                <div class="row">
-                    <form class="form-contacts" action="/contact" method="POST">
-                        {{ form.csrf_token }}
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    <input type="name" class="form-control" id="fname" name="fname" placeholder="Your first name is..." required>
-                                </div>
-                            </div>
-                                <div class="col-xs-6">
-                                    <div class="form-group">
-                                        <input type="name" class="form-control" id="lname" name="lname" placeholder="Your last name is..." required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="form-email" name="email" placeholder="Your email..." required>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="role" name="role" required>
-                              <option disabled selected>I'm a ...</option>
-                              <option value="teacher" name="teacher">Teacher</option>
-                              <option value="administrator" name="admin">Administrator</option>
-                              <option value="tech-coordinator" name='tech-coordinator'>Technology coordinator</option>
-                              <option value="staff-member" name='staff-member'>District/home office staff member</option>
-                              <option value="interested-party" name="interested-party">Community member</option>
-                              <option value="beta-tester" name="beta-tester">Beta tester</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="contact-reason" name="reason" required>
-                              <option disabled selected>I'm interested in...</option>
-                              <option value="info" name="info">General product information</option>
-                              <option value="question" name="question">Asking a question</option>
-                              <option value="feedback" name-"feedback">Providing feedback</option>
-                              <option value="beta-test" name="new-beta">Beta testing Romeo</option>
-                              <option value="other" name="other">Something not listed</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" id="other-comments" name="response" rows="3" placeholder="Type your question or comment here?"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <footer>
         <div class="container">
             <div class="row">
@@ -136,27 +84,6 @@
     </footer>
     <script src="static/assets/js/jquery.min.js"></script>
     <script src="static/assets/bootstrap/js/bootstrap.min.js"></script>
-
-    <script>
-    ///roles and reason autocomplete by first letter
-      $(document).ready(function() {
-            BindControls();
-        });
-
-        function BindControls() {
-            $('#role').autocomplete({
-                minLength: 0,
-                scroll: true
-            }).focus(function() {
-                $(this).autocomplete("search", $(this).val());
-            });
-        }
-
-    </script>
-
-
-
-
-
 </body>
+
 </html>
