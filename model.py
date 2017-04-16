@@ -11,10 +11,10 @@ class User(db.Model):
     email = db.Column(db.String(30), nullable=False, unique=True)
     fname = db.Column(db.String(20))
     lname = db.Column(db.String(20))
-    phone = db.Column(db.String(20))
     role = db.Column(db.String(100))
-    is_beta_tester = db.Column(db.Boolean)
-    is_subscriber = db.Column(db.Boolean)
+    contact_reason = db.Column(db.String(200))
+    response = db.Column(db.String(10000))
+
     responses = db.relationship('Response', backref='user')
     entered_at = db.Column(db.DateTime)
 
@@ -29,7 +29,7 @@ class Response(db.Model):
 
     response_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
-    type_response = db.Column(db.String(100))
+    contact_reason = db.Column(db.String(100))
     response = db.Column(db.Text)
     responded_to = db.Column(db.Boolean, default=False)
     responded_at = db.Column(db.DateTime)

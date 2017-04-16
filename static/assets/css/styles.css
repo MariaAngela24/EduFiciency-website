@@ -460,3 +460,33 @@ body {
   margin-bottom:0;
 }
 
+#use-form {
+  background-color: white;
+  padding:30px 200px 60px 200px;
+}
+
+#submission_success {
+  background-color: white;
+  padding:30px 200px 60px 200px;
+}
+
+#other-comments {
+  min-height: 200px;
+}
+
+
+#form-control {
+  border-radius: 0;
+  background-clip: padding-box;
+  box-shadow: transparent;
+  width: 100%;
+  font-family: Arial, Helvetica, sans;
+  display: block;
+  border: 3px solid transparent;
+  padding: 15px 20px;
+  color: #454d52;
+  background: #fff;
+  letter-spacing: 1px;
+}
+
+
