@@ -41,6 +41,7 @@
   background-color:rgba(255,255,255,0.75);
   max-width:800px;
   margin:50px auto;
+  margin-top: 125px;
 }
 
 @media (max-width:991px) {
