@@ -282,26 +282,23 @@ body {
 }
 
 #contact-btn {
-  margin-top:50px;
+  margin-top:20px;
   margin-bottom:40px;
   padding:15px 50px;
-  background-color:transparent;
-  color:black;
-  border-color:black;
+  background-color:rgb(62,62,248);
+  color:white;
 }
 
 #tracker-btn {
-  background-color:transparent;
-  color:rgb(62,62,248);
-  border-color:rgb(62,62,248);
+  background-color:rgb(62,62,248);
+  color:white;
   padding:15px 50px;
   margin-top:20px;
 }
 
 #tracker-btn2 {
-  background-color:transparent;
-  color:rgb(62,62,248);
-  border-color:rgb(62,62,248);
+  background-color:rgb(62,62,248);
+  color:white;
   padding:15px 50px;
   margin-top:65px;
 }

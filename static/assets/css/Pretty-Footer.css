@@ -5,7 +5,7 @@ footer {
   width:100%;
   text-align:left;
   font:bold 16px sans-serif;
-  padding:55px 0;
+  padding:20px 0;
   bottom:0;
   color:#ffffff;
 }
@@ -13,7 +13,7 @@ footer {
 .footer-navigation h3 {
   margin:0;
   font:normal 32px Raleway, cursive;
-  margin-bottom:50px;
+  margin-bottom:10px;
   color:#92999f;
 }
 
