@@ -122,7 +122,7 @@ def process_contact():
 
 if __name__ == "__main__":
     app.debug = True
-    connect_to_db(app)
+    #connect_to_db(app)
     # DebugToolbarExtension(app)
 
     # PORT = int(os.environ.get("PORT", 5000))
